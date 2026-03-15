@@ -25,7 +25,8 @@ app = FastAPI(title="Campus Connect Hub API", version="1.0.0")
 
 # CORS Configuration
 # In production set ALLOWED_ORIGINS=https://your-app.vercel.app in Render env vars
-default_origins = "http://localhost:8080,http://localhost:5173,http://localhost:3000"
+
+default_origins = "http://localhost:8080,http://localhost:5173,http://localhost:3000,https://campusconnect-kohl.vercel.app"
 _raw_origins = os.getenv("ALLOWED_ORIGINS", default_origins)
 allowed_origins = [o.strip() for o in _raw_origins.split(",") if o.strip()]
 
